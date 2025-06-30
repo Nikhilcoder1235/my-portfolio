@@ -1,15 +1,10 @@
-// src/components/Navbar.js
-import styles from "../app/page.module.css"; 
-
 export default function Navbar() {
+  const navItems = ["🏠 Home", "👤 About", "⚙ Service", "🖼 Portfolio", "📰 News", "📧 Contact"];
   return (
-    <ul className={styles.nav}>
-      <li>🏠 Home</li>
-      <li>👤 About</li>
-      <li>⚙ Service</li>
-      <li>🖼 Portfolio</li>
-      <li>📰 News</li>
-      <li>📧 Contact</li>
+    <ul>
+      {navItems.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
     </ul>
   );
 }
